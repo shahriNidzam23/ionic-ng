@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title>Add New Task</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="taskForm" (ngSubmit)="save(form)">
+
+
+    <ion-item>
+      <ion-label position="stacked">Your Task</ion-label>
+      <ion-input clearInput formControlName="task"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Task Dateline (Date)</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" 
+      pickerFormat="DD/MM/YYYY" clearInput formControlName="date">
+      </ion-datetime>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Task Dateline (Time)</ion-label>
+      <ion-datetime displayFormat="HH:mm A" 
+      pickerFormat="HH:mm" clearInput formControlName="time">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-button type="submit" color="success">
+      Save
+    </ion-button>
+
+
+  </form>
+
+</ion-content>
