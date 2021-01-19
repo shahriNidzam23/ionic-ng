@@ -25,10 +25,6 @@ export class HomePage implements OnInit {
     this.getTasks();
   }
 
-  ionViewDidLeave() {
-    console.log('ionViewDidLeave');
-  }
-
   toForm(){
     const url = "/form";
     this.router.navigateByUrl(url);
